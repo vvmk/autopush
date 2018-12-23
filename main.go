@@ -66,9 +66,15 @@ func main() {
 		}
 	}()
 
-	err = watcher.Add("./")
+	if len(os.Args) < 2 {
+		err = watcher.Add("./")
+	} else {
+		err = watcher.Add(os.Args[1])
+	}
+
 	if err != nil {
 		panic(err)
 	}
+
 	<-done
 }
