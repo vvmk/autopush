@@ -53,6 +53,7 @@ func main() {
 				}
 				if event.Op&fsnotify.Chmod != fsnotify.Chmod {
 					msg := fmt.Sprintf("%s: %s\n", event.Op, event.Name)
+					fmt.Printf("%s: %s\n", event.Op, event.Name)
 					add()
 					commit(msg)
 					push()
