@@ -7,4 +7,4 @@ You must have git installed.
 Setup:
 	- dep ensure
 	- go install
-	- autopush path-of-dir
+	- autopush path/of/dir
