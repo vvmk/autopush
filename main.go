@@ -25,7 +25,7 @@ func commit(msg string) {
 }
 
 func push() {
-	git := exec.Command("git", "push", "-f", "origin", "test")
+	git := exec.Command("git", "push", "-f", "origin", "head:autopush")
 	gitOut, err := git.Output()
 	if err != nil {
 		panic(err)
